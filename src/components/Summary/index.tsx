@@ -4,8 +4,12 @@ import {
   CurrencyDollar,
 } from "@phosphor-icons/react";
 import { SummaryCard, SummaryContainer } from "./style";
+import { TransactionsContext } from "../../contexts/TransactionsContext";
+import { useContext } from "react";
 
 export function Summary() {
+  const { transactions } = useContext(TransactionsContext);
+
   return (
     <SummaryContainer>
       <SummaryCard>
