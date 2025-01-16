@@ -31,6 +31,14 @@
       "type": "outcome",
       "createdAt": "2025-01-13T22:11:59.894Z",
       "id": 4
+    },
+    {
+      "description": "lanche",
+      "price": 16,
+      "category": "comida",
+      "type": "outcome",
+      "createdAt": "2025-01-16T23:55:48.241Z",
+      "id": 5
     }
   ]
 }
