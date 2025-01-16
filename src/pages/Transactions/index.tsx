@@ -4,11 +4,15 @@ import { SearchForm } from "./components/SearchForm";
 import {
   PriceHighlight,
   TransactionContainer,
+  TransactionMobile,
+  TransactionMobileContainer,
+  TransactionMobileInfo,
   TransactionTable,
 } from "./styles";
 import { TransactionsContext } from "../../contexts/TransactionsContext";
 import { dateFormatter, priceFormatter } from "../../utils/formatter";
 import { useContextSelector } from "use-context-selector";
+import { CalendarBlank, TagSimple } from "@phosphor-icons/react";
 
 export function Transactions() {
   const transactions = useContextSelector(TransactionsContext, (context) => {
@@ -43,6 +47,30 @@ export function Transactions() {
             })}
           </tbody>
         </TransactionTable>
+
+        <TransactionMobile>
+          {transactions.map((transaction) => {
+            return (
+              <TransactionMobileContainer key={transaction.id}>
+                <h3>{transaction.description}</h3>
+                <PriceHighlight variant={transaction.type}>
+                  {transaction.type === "outcome" && "- "}
+                  {priceFormatter.format(transaction.price)}
+                </PriceHighlight>
+                <TransactionMobileInfo>
+                  <span>
+                    <TagSimple />
+                    {transaction.category}
+                  </span>
+                  <span>
+                    <CalendarBlank />
+                    {dateFormatter.format(new Date(transaction.createdAt))}
+                  </span>
+                </TransactionMobileInfo>
+              </TransactionMobileContainer>
+            );
+          })}
+        </TransactionMobile>
       </TransactionContainer>
     </div>
   );
