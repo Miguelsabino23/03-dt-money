@@ -11,6 +11,10 @@ export const SummaryContainer = styled.section`
   gap: 2rem;
 
   margin-top: -5rem;
+
+  @media (max-width: 375px) {
+    overflow-x: auto;
+  }
 `;
 
 interface SummaryCardProps {
@@ -33,6 +37,10 @@ export const SummaryCard = styled.div<SummaryCardProps>`
     display: block;
     margin-top: 1rem;
     font-size: 2rem;
+
+    @media (max-width: 375px) {
+      font-size: 1.5rem;
+    }
   }
 
   ${(props) =>
@@ -40,4 +48,19 @@ export const SummaryCard = styled.div<SummaryCardProps>`
     css`
       background-color: ${props.theme["green-700"]};
     `}
+
+  @media (max-width: 375px) {
+    width: 280px;
+  }
+`;
+
+export const DateTask = styled.span`
+  display: none;
+
+  @media (max-width: 375px) {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: ${(props) => props.theme["gray-500"]};
+  }
 `;
