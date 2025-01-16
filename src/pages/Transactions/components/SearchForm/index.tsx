@@ -1,5 +1,5 @@
 import { MagnifyingGlass } from "@phosphor-icons/react";
-import { SearchFormContainer } from "./style";
+import { SearchFormContainer, SearchFormInfo } from "./style";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -21,6 +21,10 @@ function SearchFormComponent() {
     }
   );
 
+  const transactions = useContextSelector(TransactionsContext, (context) => {
+    return context.transactions;
+  });
+
   const {
     register,
     handleSubmit,
@@ -35,6 +39,10 @@ function SearchFormComponent() {
 
   return (
     <SearchFormContainer onSubmit={handleSubmit(handleSearchTransactions)}>
+      <SearchFormInfo>
+        <p>Transações</p>
+        <span>{transactions.length} itens</span>
+      </SearchFormInfo>
       <input
         type='text'
         placeholder='Busque por transações'
@@ -43,7 +51,7 @@ function SearchFormComponent() {
 
       <button type='submit' disabled={isSubmitting}>
         <MagnifyingGlass />
-        Buscar
+        <span>Buscar</span>
       </button>
     </SearchFormContainer>
   );
