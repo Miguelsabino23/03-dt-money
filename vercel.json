@@ -2,14 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/index.ts",
+      "src": "api/transactions.ts",
       "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/transactions",
-      "dest": "/api/transactions.ts"
     }
   ]
 }
