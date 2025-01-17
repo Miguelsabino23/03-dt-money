@@ -47,12 +47,12 @@ export const SearchFormContainer = styled.form`
     }
 
     span {
-      @media (max-width: 400px) {
+      @media (max-width: 600px) {
         display: none;
       }
     }
   }
-  @media (max-width: 400px) {
+  @media (max-width: 600px) {
     flex-wrap: wrap;
   }
 `;
@@ -60,7 +60,7 @@ export const SearchFormContainer = styled.form`
 export const SearchFormInfo = styled.div`
   display: none;
 
-  @media (max-width: 400px) {
+  @media (max-width: 600px) {
     width: 100%;
     display: flex;
     justify-content: space-between;

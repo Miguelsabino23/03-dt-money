@@ -62,7 +62,7 @@ export const Content = styled(Dialog.Content)`
       }
     }
   }
-  @media (max-width: 400px) {
+  @media (max-width: 600px) {
     min-width: 100%;
     padding: 2rem;
 
