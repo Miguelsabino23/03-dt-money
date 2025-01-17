@@ -27,7 +27,7 @@ export const TransactionTable = styled.table`
       border-bottom-right-radius: 6px;
     }
   }
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     display: none;
   }
 `;
@@ -42,7 +42,7 @@ export const PriceHighlight = styled.span<PriceHighlightProps>`
       ? props.theme["green-300"]
       : props.theme["red-300"]};
 
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     font-size: 20px;
     font-weight: bold;
   }
@@ -53,7 +53,7 @@ export const TransactionMobile = styled.div`
   margin: 0.5rem 0;
   width: 100%;
 
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;

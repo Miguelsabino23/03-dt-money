@@ -15,7 +15,7 @@ export const HeaderContent = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     img {
       width: 117px;
     }
@@ -37,7 +37,7 @@ export const NewTransactionButton = styled.button`
     transition: background-color 0.2s;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     padding: 0 1rem;
   }
 `;

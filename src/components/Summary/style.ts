@@ -12,7 +12,7 @@ export const SummaryContainer = styled.section`
 
   margin-top: -5rem;
 
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     overflow-x: auto;
   }
 `;
@@ -57,7 +57,7 @@ export const SummaryCard = styled.div<SummaryCardProps>`
 export const DateTask = styled.span`
   display: none;
 
-  @media (max-width: 375px) {
+  @media (max-width: 400px) {
     display: block;
     margin-top: 0.5rem;
     font-size: 0.875rem;
